@@ -382,7 +382,7 @@ textarea[readonly] {
 
 /********************************************Borne accueil***************************************************/
 
-body {
+#centerLogo #searchDiv {
     text-align: center;
 }
 

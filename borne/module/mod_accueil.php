@@ -1,7 +1,3 @@
-<?php
-$date = new DateTime('now');
-;
-?>
 <html lang="fr-FR">
 <head>
     <title>Borne</title>
@@ -13,20 +9,20 @@ $date = new DateTime('now');
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <script type="text/javascript" src="javascript/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="javascript/script.js"></script>
+    <script type="text/javascript" src="javascript/fonctions.js"></script>
 </head>
 <body>
-<div id="currentDate">
-    <?php echo $date->format('d-m-Y H:i');?>
-</div>
-<div id="centerLogo">
-    <img src="images/blasonaix_officiel_2015.jpg">
-</div>
-<div id="searchDiv">
-    <p>Tapez votre recherche :</p>
-    <form id="searchInput">
-        <input>
-    </form>
-</div>
+    <div id="currentDate">
+    </div>
+    <div id="centerLogo">
+        <img src="images/blasonaix_officiel_2015.jpg">
+    </div>
+    <div id="searchDiv">
+        <p>Tapez votre recherche :</p>
+        <form id="searchInput">
+            <input id="input">
+            <button id="searchButton">Rechercher</button>
+        </form>
+    </div>
 </body>
 </html>

@@ -46,21 +46,6 @@
     }
 
     @include_once($DATA_PATH . '/objet_bdd/all_classes.php');
-    if (!isset($ALL_CLASSE_LOADED))
-    {
-        $ob = new ObjetBdd($db);
-        $ob->setTables(array(   'ARRP_AGENTS',
-                                'ARRP_COMMUNES',
-                                'ARRP_DEMANDES',
-                                'ARRP_DEMANDES_PARCELLES',
-                                'ARRP_DEMANDES_VOIES',
-                                'ARRP_DEMANDEURS',
-                                'ARRP_DODUMENTS',
-                                'ARRP_VOIES',
-                                'ARRP_USERS', ));
-        $ob->setAllObjetsForTables();
-        @include_once($DATA_PATH . '/objet_bdd/all_classes.php');
-    }
 	//$_SESSION[PROJET_NAME]['authentified']=1;
 	// Vérification si l'on est sur une page qui demande une authentification
     if (isset($PAGES[$P]['SECURE_ACCESS']) && $PAGES[$P]['SECURE_ACCESS'] == 1 && $_SESSION[PROJET_NAME]['authentified'] != 1)

@@ -1,3 +1,7 @@
+$(document).ready(function () {
+    updateTime();
+});
+
 function ValiderFormulaireDemandeur(){
 	var F = document.F1;
     var msg = '';
@@ -830,6 +834,31 @@ function checkString(entry){
 		}           
 	}
 	return false;
+}
+
+function updateTime(){
+    let dayName = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
+    let monthName =['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+    $('#currentDate').html("");
+    let date= new Date();
+    let year = date.getFullYear();
+    let month = monthName[date.getMonth()];
+    let day = dayName[date.getDay()];
+    let dayNum = date.getDate();
+    let hr = date.getHours();
+    let m = date.getMinutes();
+    let s = date.getSeconds();
+    if(m < 10)
+    {
+        m = "0" + m
+    }
+    if(s < 10)
+    {
+        s = "0" + s
+    }
+    let strDate = day + " " + dayNum + " " + month + " " + year + " " + hr + ":" + m ;
+    $('#currentDate').append(strDate);
+    setTimeout("updateTime()",100);
 }
 
 
